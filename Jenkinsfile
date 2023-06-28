@@ -13,8 +13,9 @@ pipeline{
 
         stage('Build the web-app-docker image'){
             steps{
-                sh "cd /tmp/java-web-app-docker/"
+                dir('/tmp/java-web-app-docker'){
                 sh "docker build -t skmdab/webapp:1 ."
+                }
             }
         }
 
