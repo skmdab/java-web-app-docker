@@ -11,10 +11,9 @@ pipeline{
             }
         }
 
-        stage('Build the web-app-docker image'){
+        stage('Build the webapp image'){
             steps{
-                 sh "docker build -t skmdab/webapp:1 ."
-                }
+                sh "docker build -t skmdab/webapp:1 ."
             }
         }
 
