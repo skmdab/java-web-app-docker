@@ -10,6 +10,6 @@ RUN git clone https://github.com/skmdab/java-web-app-docker.git \
 
 FROM tomcat:8-jdk8-corretto
 
-COPY --from=builder /tmp/java-web-app-docker/target/java-web-app-docker*.war /usr/local/tomcat/webapps/
+COPY --from=builder /tmp/java-web-app-docker/target/java-web-app*.war /usr/local/tomcat/webapps/
 
 EXPOSE 8080
